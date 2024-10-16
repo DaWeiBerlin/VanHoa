@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestell-App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+        @media(max-width:750px){
+            #overlay-menu{
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+    
+    </style>
+    <script src="script.js"></script>
+    
+</head>
+<body onload="addBasket();number()" id="bodyBestellen">
+    <div id="background2"></div>
+    <header>
+
+        <div id="header"><a href="index.html"><img src="img/asian-hat.png" alt=""></a><a href="">Van Hoa</a></div>
+        <div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="bestellen.html">Bestellen</a>
+                <a href="reservieren.html">Reservieren</a>
+                <a href="menu.html">Menü</a>
+                <a href="standorte.html">Standorte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <div id="right2"><a style="display: flex;" href="warenkorb.html"><img src="img/essen.png" alt=""></a><div id="number"><div id="number_inner"></div></div></div>
+                <div id="menu3"><img id="overlayMenuImg" onclick="openMenu()" src="img/more.png" alt="Menü"></div>
+                
+            </nav>
+        </div>
+        
+        
+        <div id="overlayMenu" style="display: none;">
+            <div id="menuMenu">
+                <a id="OverlayHeaderCenter" href="index.html"><div><img src="img/asian-hat.png" alt=""></div><div><h2>Van Hoa</h2></div></a>
+                <div id="marginLeft">
+                    <a href="index.html"><img src="img/web-page.png" alt="Startseite">Startseite</a>
+                    <a href="bestellen.html"><img id="m2" src="img/mobile.png" alt="Bestellen">Bestellen</a>
+                    <a href="warenkorb.html"><img src="img/essen.png" alt="">Warenkorb</a>
+                    <a href="reservieren.html"><img src="img/book.png" alt="Reservieren">Reservieren</a>
+                    <a href="menu.html"><img src="img/menu.png" alt="Menü"> Menü</a>
+                    <a href="standorte.html"><img src="img/location.png" alt="Standorte">Standorte</a>
+                    <a href="kontakt.html"><img src="img/communicate.png" alt="Kontakt">Kontakt</a>
+                    <a href="impressum.html"><img src="./img/viewing-a-fingerprint-mark-like-binary-code.png" alt="">impressum</a>
+                </div>
+                    
+                <img id="closeImg" onclick="closeMenu()" src="img/close.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main id="main3">
+        <div id="basket" class="warenkorb_basket">
+            <div style="background-color: #3c3c3c96 !important;
+            width: calc(100% - 35%);
+            padding: 40px 17.5% 0;
+            border-radius: 4px;
+            height: calc(100vh - 200px);
+            position: relative;
+            bottom: 30px;
+            position: fixed;
+            top: 90px;
+            overflow-y: scroll;">
+                <div id="Warenkorb"><h2>Warenkorb</h2></div>
+                <div id="Gerichte" class="Gerichte"></div>
+                <div id="Summe" class="Summe"></div>
+                <div id="formArea">
+                    <div>
+                        <form id="form" autocomplete="on" method="get" style="display: flex;justify-content: center;flex-direction: column;">
+                            <div class="flex">
+                                <div class="inputleft">
+                                    <label for="Vorname">Vorname</label>
+                                    <input id="input" name="submitted-given-name" id="Vorname" placeholder="Vorname" autocomplete="given-name" required></input>
+                                </div>
+                                <div class="inputright">
+                                    <label for="Nachname">Nachname</label>
+                                    <input id="input" name="submitted-family-name" id="Nachname" placeholder="Nachname" autocomplete="family-name" required></input>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="inputleft">
+                                    <label for="Adresse">Straße und Hausnummer</label>
+                                    <input id="input" name="submitted-street-adress" id="Adresse" placeholder="Straße und Hausnummer" autocomplete="street-address" required></input>
+                                </div>
+                                <div class="inputright">
+                                    <label for="Postleitzahl">Postleitzahl</label>
+                                    <input id="input" name="submitted-postal-code" id="Postleitzahl" placeholder="Postleitzahl" autocomplete="postal-code" required></input>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="inputleft">
+                                    <label for="Bezirk">Bezirk</label>
+                                    <input id="input" name="submitted-adress-level1" id="Bezirk" placeholder="Bezirk" autocomplete="address-level1" required></input>
+                                </div>
+                                <div class="inputright">
+                                    <label for="Tefonnummer">Telefonummer</label>
+                                    <input id="input" name="submitted-mobile" id="Bestellhinweise" placeholder="Bestellhinweise" autocomplete="mobile" required></input>
+                                </div>
+                            </div>
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="width: 100%;display: flex;align-items: center;
+                                flex-direction: column;">
+                                    <label id="Hinweise" for="Bestellhinweise">Bestellhinweise</label>
+                                    <input id="input" name="Bestellhinweise" id="Bestellhinweise" placeholder="Bestellhinweise" autocomplete="on" required></input>
+                                </div>
+                                
+                            </div>
+                        
+                            <div id="basket_a"><button onclick="emptyBasket()" href="bestellbestätigung.html" type="submit">Bestellung absenden</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="flexcenter"><a href="standorte.html">Stargarder Str. 79 10437 Berlin </a></div>
+        <div style="display: flex;">
+            <a href="bestellen.html">Bestellen</a>
+            <a href="standorte.html">Standorte</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </footer>
+</body>
+</html>

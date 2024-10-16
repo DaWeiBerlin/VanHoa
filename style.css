@@ -1,0 +1,1581 @@
+@font-face {
+    font-family: GaMaamli;
+    src: url(fonts/GaMaamli-Regular.ttf);
+}
+
+@font-face {
+    font-family: Jansina;
+    src: url(fonts/JANSINA.ttf);
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-Thin.ttf);
+    font-weight: 0;
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-Light.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-Regular.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-Medium.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-SemiBold.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-Bold.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: BeVietnam;
+    src: url(fonts/BeVietnam-ExtraBold.ttf);
+    font-weight: 600;
+}
+
+*{
+    scrollbar-width: none;
+}
+
+button, a, input {
+    outline: none;
+}
+
+/* Custom focus for keyboard navigation */
+.keyboard-focus button:focus,
+.keyboard-focus a:focus,
+.keyboard-focus input:focus {
+    outline: 2px solid #2196f3; /* Add a custom outline for keyboard */
+}
+
+a:active{
+    outline: none;
+}
+
+h2{
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Jansina, sans-serif;
+    letter-spacing: 0.9px;
+    min-height: 100vh;
+}
+
+button{
+    background-color: #2196f3;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    margin-top: 30px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    filter: blur(0.1px);
+    box-shadow: 0 0 2px #2196f3;
+    font-family: Jansina;
+}
+
+a:hover{
+    scale: 1.1;
+}
+
+.inputleft{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.inputright{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#Bestätigung{
+    color: rgb(34, 34, 34);
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+#OverlayHeaderCenter{
+    margin-bottom: 15px;
+}
+
+header{
+    top: 0;
+    font-family: Jansina;
+    z-index: 5;
+    position: fixed;
+    height: 90px;
+    color: rgb(0, 0, 0);
+    width: 92.5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5% 0 5%;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    filter: drop-shadow(0px 5px 2px rgb(57, 57, 57) );
+    font-weight: 500;
+}
+
+#header{
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+
+
+#header a{
+    color: black;
+    text-decoration: none;
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: blur(0.3px);
+    filter: drop-shadow(0 0 0.5px #939393);
+    cursor: pointer;
+}
+
+#overlayMenu{
+    position: fixed;
+    left: 0;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.952);
+}
+
+#overlayMenu img{
+    width: 35px;
+    height: 35px;
+    padding-right: 10px;
+}
+
+#column{
+    display: flex;
+    flex-direction: column;
+}
+
+#m2{
+    position: relative;
+    left: 5px;
+}
+
+#menu3{
+    width: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#marginLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#Area2{
+    width: 20%;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 5px black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#Area2_sub1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Area2_sub1 img{
+    width: 150px;
+    height: 80px;
+    filter: drop-shadow(0 0 1px grey);
+}
+
+#Area2_sub11{
+    width: fit-content;
+    position: relative;
+    top: 21px;
+    right: 4px;
+    font-weight: 600;
+}
+#Area2_sub12{
+    width: fit-content;
+}
+
+#marginLeft a:hover{
+    scale: 1.1;
+}
+
+#closeImg:hover{
+    scale: 1.1;
+}
+
+#menuMenu{
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: calc(100% - 60px);
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 30px;
+    filter: drop-shadow(0);
+}
+
+#closeImg{
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+#menuMenu a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+ 
+
+sup{
+    font-size: 12px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+nav a{
+    padding: 0 1px;
+    font-weight: 610;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0 6px;
+    font-size: 22px;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px;
+}
+
+nav a:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+nav a:after{
+    content: "";
+    background-color: red;
+    height: 2px;
+    width: 100%;
+}
+
+
+
+#main{
+    display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  top: 90px;
+  width: 100%;
+  height: calc(100vh - 160px);
+  color: black;
+  justify-content: space-between;
+}
+
+#main5{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 90px;
+    padding: 40px 5%;
+    height: calc(100% - 160px);
+    padding-bottom: 90px;
+}
+
+#main6 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 90px;
+    padding: 0;
+    width: 100%;
+    padding-bottom: 0px;
+    padding-bottom: 90px;
+    height: calc(100vh - 162px);
+    padding-bottom: 0px;
+    background-image: url(img/mountain-6525356_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    z-index: -1;
+    text-shadow: 0 0 6px black;
+    overflow-y: auto;
+}
+
+#main7 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 90px;
+    padding: 0px 5%;
+    height: 574px;
+    padding-bottom: 0px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    z-index: 0;
+    text-shadow: 0 0 6px black;
+}
+
+#main7Layer {
+    position: absolute;
+    height: calc(100vh - 265px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.13);
+    padding-bottom: 90px;
+    z-index: 1;
+    top: 90px;
+    padding: 30px 0 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#main7 a{
+    color: white;
+    text-decoration: none;
+}
+
+#standorte{
+    display: flex;
+    width: 111%;
+    align-items: center;
+}
+
+#standorte3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#slider{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 90px;
+    background-color: white;
+    z-index: 5;
+    filter: drop-shadow(0px 5px 2px black);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 600;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+#slider div{
+    inline-size: min-content;
+    width: fit-content;
+    margin: 0 10px;
+    word-wrap: unset;
+    word-break: keep-all;
+    overflow-wrap: unset;
+    text-wrap: nowrap;
+}
+
+#slider a {
+    color: black;
+    text-decoration: none;
+}
+
+#slider a:hover{
+    scale: 1.1;
+}
+
+
+
+#header2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#standorte2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#standorteBeschreibung {
+    width: 100%;
+    padding-bottom: 0 !important;
+    font-size: 24px;
+}
+
+#standorteBeschreibung2{
+    width: 40%;
+    padding-bottom: 0 !important;
+    
+}
+
+
+#standorteKarte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: calc(100% - 70px);
+    padding-bottom: 0 !important;
+    position: relative;
+    top: -15px;
+    padding: 0 5% 0 2.5%;
+    padding-bottom: 0px;
+}
+
+#karte{
+    border-radius: 4px;
+}
+
+#main6Layer{
+    position: absolute;
+    height: calc(100vh - 162px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.13);
+    z-index: 1;
+    top: 90px;
+}
+
+#main6 div{
+    padding-bottom: 40px;
+    z-index: 2;
+}
+
+#main6 h2{
+    padding-bottom: 10px;
+}
+
+#main5 a{
+    color: black;
+    text-decoration: underline;
+    padding: 10px 0;
+
+}
+
+#background{
+    position: fixed;
+    top: 70px;
+    z-index: -2;
+    background-image: url(img/vanhoa-landingpage-1920x1504-2.png);
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+#background_layer{
+    position: fixed;
+    top: 70px;
+    z-index: -1;
+    background-color:rgba(255, 255, 255, 0.25);
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+
+#main2{
+    display: flex;
+    position: relative;
+    top: 145px;
+    width: 100%;
+    height: auto;
+    color: black;
+}
+
+#main3{
+    display: flex;
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: calc(100vh - 140px);
+    color: black;
+}
+
+#main4{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100vh);
+    color: black;
+}
+
+#input{
+    margin-top: 5px;
+    width: 300px !important;
+    height: 24px;
+    border-radius: 4px;
+    text-align: start!important;
+    font-size: 16px;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    color: white;
+    border-radius: 4px;
+}
+
+.warenkorb_basket {
+    background-color: #0000005e !important;
+    box-shadow: 0 0 3px black !important;
+    text-shadow: 0 0 0px black !important;
+    position: fixed !important;
+    width: calc(100%) !important;
+    margin: 0 0px 0 0 !important;
+    min-height: calc(100% - 160px) !important;
+    background-color: white !important;
+    border-radius: 4px !important;
+    min-width: calc(100% - 30%) !important;
+    right: 0 !important;
+    top: 90px !important;
+    font-size: 17px !important;
+    max-height: calc(100% - 188px) !important;
+    overflow-y: scroll !important;
+    display: flex !important;
+    flex-direction: column !important;
+    left: 0 !important;
+    margin: 0 !important;
+}
+
+.flex{
+    display: flex;
+}
+
+
+#Hinweise{
+    width: 308px;
+    text-align: start;
+}
+
+#main a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 24px;
+    box-shadow: 0 0 5px black;
+    text-shadow: 0 0 0.5px black;
+    font-weight: 600;
+    width: 146px;
+    display: block;
+    text-align: left;
+}
+
+#main a:hover{
+    scale: 1.1;
+}
+
+.button1Area{
+    width: 250px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button2Area{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+}
+
+
+.flexcenter{
+    display: flex;
+    align-items: center;
+}
+
+#up{
+    position: fixed;
+    left: 2.5%;
+    bottom: 2.5%;
+}
+
+#left{
+    width: 65.5%;
+  flex-flow: column wrap;
+}
+
+#left2 {
+    padding-left: 5%;
+    width: calc(90% - 40px);
+    flex-flow: column wrap;
+}
+
+#right2 {
+    height: 70px;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    position: relative;
+}
+
+#Area1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer{
+    font-weight: 600;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 90%;
+    padding: 0 5%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0px -5px 2px rgb(61, 61, 61));
+    font-family: Jansina;
+    font-size: 22px;
+    z-index: 2;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding-left: 10px;
+
+}
+
+footer img{
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
+}
+
+button{
+    cursor: pointer;
+}
+
+textarea{
+    vertical-align: middle;
+    font-size: 16px;
+    text-align: center;
+    width: 20px;
+    height: 18px;
+    border: black 1px solid;
+    resize: none;
+    border-radius: 4px;
+    box-shadow: 0 0 5px black;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+.Menüpunkt{
+    position: relative;
+    padding: 10px 0px;
+    height: auto;
+    width: 90%;
+    background-color: white;
+    border-radius: 4px;
+    margin: 15px 20px;
+    box-shadow: 0 0 3px black;
+}
+
+.Menüpunkt2 {
+    position: relative;
+    padding: 10px 0px;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    margin: 20px 20px;
+    box-shadow: 0 0 3px black;
+}
+
+#MenüÜberschriften{
+    font-size: 30px;
+    font-weight: 540;
+}
+
+.MenüAbschnitte{
+    padding: 30px 10% 20px 10%;
+}
+
+.Menüpunkte{
+    text-shadow: 0 0 0.5px BLACK;
+    padding: 5px 0px 0 10%;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.Beschreibung {
+    display: flex;
+    align-items: center;
+    padding: 0px 10% 20px 10%;
+}
+
+#description{
+    text-shadow: 0 0 0.1px black;
+    width: 90%;
+    font-size: 18px;
+    hyphens: auto;
+    word-break: break-word;
+}
+.Preis{
+    padding: 0px 10% 0px 10%;
+    width: 15%;
+}
+
+.Preis2 {
+    padding: 15px 0% 20px 10%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+#Preis{
+    width: 100px;
+    padding: 0px 0 35px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#Preis2{
+    width: 100px;
+    font-size: 18px;
+}
+
+#addButton img{
+    filter: drop-shadow(0px 0px 1px #2196f3) blur(0.2px);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    left: 25px;
+}
+
+#Gerichte{
+    width: calc(100%);
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.Gerichte{
+    font-weight: 600;
+    width: 100% !important;
+}
+.Summe{
+    font-weight: 600;
+    width: 100% !important;
+}
+
+#basket{
+    color: white;
+    background-image: url(img/temple-5893180_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    box-shadow: 0 0 3px black;
+    text-shadow: 0 0 5px black;
+    position: fixed;
+    min-width: calc(33%);
+    margin: 0 0px 0 20px;
+    min-height: 189px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 4px;
+    right: 20px;
+    top: 160px;
+    font-size: 23px;
+    max-height: calc(100% - 245px);
+    overflow-y: scroll;
+}
+
+
+#basketf{
+    box-shadow: 0 0 3px black;
+    text-shadow: 0 0 0px black;
+    position: fixed;
+    min-width: calc(24%);
+    margin: 0 0px 0 20px;
+    min-height: 189px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 4px;
+    padding: 25px 20px 40px 30px;
+    max-width: 300px;
+    right: 20px;
+    top: 85px;
+    font-size: 17px;
+    max-height: calc(100% - 170px);
+    overflow-y: scroll;
+}
+
+label{
+    margin-top: 15px;
+}
+
+#basket a{
+    margin-top: 20px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    right: 7.5px;
+    background-color: #2196f3;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+}
+
+.basket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 23px;
+    padding: 5px 0;
+    text-shadow: 0 0 5px black;
+    height: 40px;
+}
+
+#basketRight{
+    display: flex;
+    align-items: center;
+}
+
+#basket_a{
+    left: 135px;
+    bottom: 0px;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    filter: blur(0.1px);
+}
+
+.basket img{
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    padding: 5px;
+    filter: drop-shadow(0 0 3px black);
+}
+
+#up img{
+    width: 40px;
+    height: 40px;
+}
+
+#Warenkorb{
+    width: 110px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 600; 
+}
+
+h3{
+    margin: 0;
+}
+
+#formArea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+#Summe{
+    font-size: 23px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: calc(100% - 0px);
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+#Area2{
+    width: 200px;
+    position: relative;
+    top: 175px;
+}
+
+#reservation{
+    width: calc(100%);
+    height: calc(100% - 160px);
+    object-fit: cover;
+    position: relative;
+    top: 90px;
+    z-index: -1;
+}
+
+.flexcenter2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0 ;
+    font-size: 21px;
+}
+
+input[type="submit"]{
+    box-shadow: 0 0 5px black;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    background-color: #2196f3;
+    font-family: Jansina;
+    padding: 5px 10px;
+    font-size: 23px;
+}
+input{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#guests{
+    height: 20px;
+    width: 50px;
+    overflow-y: hidden;
+}
+#reservationArea{
+    background-color: rgba(0, 0, 0, 0.12);
+    color: white;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    height: calc(100% - 370px);
+    width: calc(100% - 50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 105px 25%;
+}
+
+#background2 img{
+    width: 100%;
+    height: 100%;
+}
+
+#sumMb{
+    width: calc(100% - 10px);
+    margin-right: 10px;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#background2{
+    position: fixed;
+    top: 90px;
+    width: 100vw;
+    height: calc(100% - 160px);
+    padding-bottom: 0px !important;
+}
+
+#number{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    font-size: 13px;
+    color: #a33030;
+    background-color: white;
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    border-radius: 50%;
+    border: 1px solid #db9a34;
+}
+
+#sumMb2{
+    width: calc(100% - 10px);
+    margin-right: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+#footer{
+    display: flex;
+}
+
+@media(max-width: 1400px){
+    #basket{
+        width: 28%;
+    }
+
+    .Menüpunkt{
+        width: 94%;
+        margin: 15px 2.5%;
+    }
+}
+
+@media(max-width:900px){
+    .flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    #input{
+        width: 250px !important;
+    }
+    #Hinweise{
+        width: 253px;
+    }
+    .inputleft{
+        margin-right: 0;
+    }
+    .inputright{
+        margin-left: 0;
+    }
+
+    #standorte2 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 979px;
+        position: absolute;
+        top: 0px;
+        overflow-y: scroll;
+    }
+
+    #standorte3 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100vh - 160px);
+        position: absolute;
+        top: 0px;
+        overflow-y: scroll;
+    }
+
+    #main6 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        top: 90px;
+        padding: 90px 5%;
+        padding-bottom: 90px;
+        padding-bottom: 90px;
+        height: 980px;
+        padding-bottom: 40px;
+        background-position: center;
+        text-align: center;
+        z-index: -1;
+        text-shadow: 0 0 6px black;
+        width: 100%;
+        overflow-y: scroll;
+        padding: 0;
+    }
+
+    #standorteBeschreibung2 {
+        position: absolute;
+        width: 100%;
+        padding-bottom: 0 !important;
+        top: 30px;
+    }
+    
+    #main6Layer {
+        position: fixed;
+        height: calc(100% - 160px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.13);
+        padding-bottom: 0;
+        z-index: 1;
+        top: 90px;
+    }
+
+    #standorteKarte {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 400px;
+        padding-bottom: 0 !important;
+        padding: 0 0 0 0;
+        top: 470px;
+        padding-bottom: 0px;
+    }
+
+    #main7Layer {
+        position: absolute;
+        height: calc(100vh - 160px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.13);
+        z-index: -1;
+        top: 90px;
+        padding: 0px 0 0px !important;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 0 0 !important;
+    }
+
+    #main7 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        top: 90px;
+        padding: 0px 5%;
+        height: calc(100vh - 160px);
+        padding-bottom: 0px;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        z-index: 0;
+        text-shadow: 0 0 6px black;
+    }
+}
+        
+
+
+
+@media(min-width:850px){
+    #menu3{
+        display: none;
+    } 
+}
+
+@media(max-width:850px){
+    nav a{
+        display: none;
+    }
+    #overlayMenuImg{
+        width: 35px;
+        height: 35px;
+    }
+    #basket{
+        display: none;
+    }
+    #left{
+        width: 100%;
+    }
+    #menu3{
+        display: flex;
+        align-items: center;
+    }
+    #footer{
+        display: none;
+    }
+}
+
+@media(max-width:750px){
+    footer{
+        justify-content: center;
+    }
+    .flexcenter{
+        display: none;
+    }
+
+}
+
+@media(max-width:600px){
+    #main6 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 90px;
+        padding: 90px 5%;
+        padding-bottom: 90px;
+        padding-bottom: 90px;
+        height: 1015px;
+        padding-bottom: 40px;
+        background-position: center;
+        text-align: center;
+        z-index: -1;
+        text-shadow: 0 0 6px black;
+        width: 100%;
+        overflow-y: scroll;
+        padding: 0 0 0;
+    }
+
+    #standorteBeschreibung2 {
+        width: 80%;
+        padding-bottom: 0 !important;
+        position: relative;
+        top: 30px;
+    }
+
+    #standorteKarte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: calc(100% - 70px);
+        padding-bottom: 0 !important;
+        position: relative;
+        top: 4px;
+        padding: 0 0 0 0;
+        padding-bottom: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media(max-width:500px){
+    #reservationArea {
+        background-color: rgba(0, 0, 0, 0.12);
+        color: white;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        height: calc(100% - 370px);
+        width: calc(100% - 30%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 105px 15%;
+      }
+
+      #main6 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 90px;
+        padding: 90px 5%;
+        padding-bottom: 90px;
+        padding-bottom: 90px;
+        height: 1015px;
+        padding-bottom: 40px;
+        background-position: center;
+        text-align: center;
+        z-index: -1;
+        text-shadow: 0 0 6px black;
+        width: 100%;
+        overflow-y: scroll;
+        padding: 0;
+    }
+}
+
+@media(max-width:350px){
+    #reservationArea {
+        background-color: rgba(0, 0, 0, 0.12);
+        color: white;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        height: calc(100% - 370px);
+        width: calc(100% - 20%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 105px 10%;
+        justify-content: space-between;
+    }
+
+    #main6 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 90px;
+        padding: 90px 5%;
+        height: 1015px;
+        padding-bottom: 40px;
+        background-position: center;
+        text-align: center;
+        z-index: -1;
+        text-shadow: 0 0 6px black;
+        width: 100%;
+        overflow-y: scroll;
+        padding: 0;
+    }
+}
+
+@media(max-width:450px){
+    #addButton img {
+        filter: drop-shadow(0px 0px 1px #2196f3) blur(0.2px);
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        position: relative;
+        left: 10px;
+        bottom: 30px;
+      }
+    .Beschreibung{
+        align-items: start;
+        flex-direction: column;
+        padding: 15px 0 0px 10%;
+        width: fit-content;
+    }
+    header img{
+        width: 30px;
+        height: 30px;
+        filter: drop-shadow(0 0 0.5px #939393);
+    }
+    #menu3{
+        width: 50px;
+    }
+    #header{
+        font-size: 30px;
+    }
+    .Preis2{
+        padding: 15px 0% 5px 0;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+    }
+    #addButton{
+        position: relative;
+        top: 60px;
+        left: 200px;
+    }
+    .Menüpunkte{
+        margin-bottom: 0;
+    }
+    #Preis{
+        position: relative;
+        bottom: 0px;
+    }
+}
+
+@media(max-height:900px){
+    #main {
+        display: flex;
+        align-items: start;
+        position: relative;
+        flex-direction: row;
+        top: 90px;
+        width: 100%;
+        height: calc(100vh - 160px);
+        color: black;
+        justify-content: space-between;
+    }
+
+    #Area1 {
+        width: 166px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: 20px;
+    }
+
+    #Area2 {
+        width: calc(100% - 170px);
+        max-width: 200px;
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 20px;
+    }
+}
+
+@media(max-height: 665px){
+    .flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    #input{
+        width: 250px !important;
+    }
+    #Hinweise{
+        width: 253px;
+    }
+    .inputleft{
+        margin-right: 0;
+    }
+    .inputright{
+        margin-left: 0;
+    }
+
+    #standorte2 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 979px;
+        position: absolute;
+        top: 0px;
+        overflow-y: scroll;
+    }
+
+    #standorte3 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        padding-top: 40px;
+        padding-bottom: 180px;
+        overflow-y: auto;
+    }
+
+    #main6 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        top: 90px;
+        padding: 90px 5%;
+        padding-bottom: 90px;
+        padding-bottom: 90px;
+        height: 980px;
+        padding-bottom: 40px;
+        background-position: center;
+        text-align: center;
+        z-index: -1;
+        text-shadow: 0 0 6px black;
+        width: 100%;
+        overflow-y: scroll;
+        padding: 0;
+    }
+
+    #standorteBeschreibung2 {
+        position: absolute;
+        width: 100%;
+        padding-bottom: 0 !important;
+        top: 30px;
+    }
+    
+    #main6Layer {
+        position: fixed;
+        height: calc(100% - 160px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.13);
+        padding-bottom: 0;
+        z-index: 1;
+        top: 90px;
+    }
+
+    #standorteKarte {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 400px;
+        padding-bottom: 0 !important;
+        padding: 0 0 0 0;
+        top: 470px;
+        padding-bottom: 0px;
+    }
+
+    #main7Layer {
+        position: fixed;
+        height: calc(100%);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+        top: 90px !important;
+        padding: 0px 0 0px !important;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 0 0 !important;
+    }
+}
+
+@media(max-width:900px) and (min-height: 650px){
+    #main7Layer {
+        position: fixed;
+        height: calc(100vh - 160px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.13);
+        z-index: -1;
+        top: 90px !important;
+        padding: 0px 0 0px !important;
+        display: flex;
+        justify-content: center;
+        padding: 0px 0 0px 0 !important;
+        overflow-y: scroll;
+    }
+}
